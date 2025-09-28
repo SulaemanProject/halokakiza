@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Confess Buat Kak Izaaa</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-image: url('https://i.pinimg.com/1200x/77/dd/43/77dd43d00f8b178378cd132ae8045f8d.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    #confessBox {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 90%;
+    }
+
+    button {
+      background-color: #1e90ff;
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      margin-top: 20px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #3aa0ff;
+    }
+
+    p {
+      font-size: 20px;
+      margin: 15px 0 0 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="confessBox">
+    <h2 id="judul">Pencet sinii kak izaaa 👇</h2>
+    <button onclick="nextStep()">Klik di sinii</button>
+    <p id="isi"></p>
+  </div>
+
+  <script>
+    let step = 0;
+
+    function nextStep() {
+      const isi = document.getElementById("isi");
+      const judul = document.getElementById("judul");
+      const button = document.querySelector("button");
+
+      step++;
+
+      if (step === 1) {
+        isi.textContent = "Aku udah siap sama sifat kamuu, aku juga udah siapin mental kok kak izaaa 💪🙂";
+        judul.textContent = "";
+        button.textContent = "Pencet lagi kak izaaa 👉";
+      } else if (step === 2) {
+        isi.textContent = "Jadi kakak mau nggak jadi pacar aku? 🔥❤️";
+        button.style.display = "none"; // Hide button after last step
+      }
+    }
+  </script>
+
+</body>
+</html>
